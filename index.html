@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas atermicas</title>
+</head>
+<body>
+<!-- Guardado en Storage las consultas que pasa -->
+<h1>Placas atermicas KT</h1>
+
+<!-- me muestra lo que tengo en stock -->
+<ul id="mostrarElStock"></ul>
+
+<h2>¡Nos amoldados a tu bolsillo! </h2>
+<h3>Coloca la medida de la pileta que te gustaria y el valor</h3>
+
+<form class="medidasDeLosClientes">
+    <label for="medidas">Medidas:</label>	
+    <input type="texto" name="medias" id="medidas"/>
+    <br>
+    <label for="precio">Precio que se adecua a usted:</label>	
+    <input type="number" name="precio" id="precio" />
+    <br>
+    <button>Consultar</button>
+</form>
+
+
+    <h3>¿Quieres que te hagamos un presupuesto? Responde las siguientes preguntas</h3>
+    <!-- Que envie el formulario a mi pagina de formspree -->
+    <form id="formDatos" action="https://formspree.io/f/xlekaell" method="POST">
+        <!-- datos para ir completando el formulario -->
+    <label for="nombre_apellido">Nombre y Apellido:</label>	
+    <input type="text" name="nombre_apellido" />
+    <br>
+    <label for="email">Email:</label>	
+    <input type="email" name="email" />
+    <br>
+    <label for="telefono">Celular:</label>	
+    <input type="number" name="Celular" />
+    <br>
+    <label for="consulta">Presupuesto a consultar:</label>	
+    <input type="text" name="consulta" />
+    <br>
+
+        
+        <input type="submit" value="Enviar consulta"/>
+        <br>
+        <input type="reset" value="Borrar consulta"/>
+    
+
+    </form>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
