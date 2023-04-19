@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Placas atermicas</title>
 </head>
 <body>
@@ -12,18 +13,21 @@
 
 <!-- me muestra lo que tengo en stock -->
 <ul id="mostrarElStock"></ul>
-
+<div class="pileCliente">
 <h2>¡Nos amoldados a tu bolsillo! </h2>
 <h3>Coloca la medida de la pileta que te gustaria y el valor</h3>
 
 <form class="medidasDeLosClientes">
+    <div class="formMedidas">
     <label for="medidas">Medidas:</label>	
     <input type="texto" name="medias" id="medidas"/>
-    <br>
+    </div>
+    <div class="formMedidas">
     <label for="precio">Precio que se adecua a usted:</label>	
     <input type="number" name="precio" id="precio" />
-    <br>
+    </div>
     <button>Consultar</button>
+</div>
 </form>
 
 
@@ -31,25 +35,34 @@
     <!-- Que envie el formulario a mi pagina de formspree -->
     <form id="formDatos" action="https://formspree.io/f/xlekaell" method="POST">
         <!-- datos para ir completando el formulario -->
+        <fieldset class="inputsContainer">
+    <div class="input">
     <label for="nombre_apellido">Nombre y Apellido:</label>	
     <input type="text" name="nombre_apellido" />
-    <br>
+    </div>
+<div class="input">
     <label for="email">Email:</label>	
     <input type="email" name="email" />
-    <br>
+</div>
+    <div class="input">
     <label for="telefono">Celular:</label>	
     <input type="number" name="Celular" />
-    <br>
-    <label for="consulta">Presupuesto a consultar:</label>	
-    <input type="text" name="consulta" />
-    <br>
+</div>
 
-        
-        <input type="submit" value="Enviar consulta"/>
-        <br>
+    <div class="input">
+    <label for="presupuestoConsulta">Presupuesto a consultar por </label>
+    <select name="presupuestoConsulta" id="presupuestoConsulta">
+        <option value="placasKt"> Placas atermicas KT 😍 </option>
+        <option value="piletas"> Piletas </option>
+        <option value="instalacion"> Instalacion</option>
+        <option value="antihumedad">Placas antihumedad</option>
+    </select></div>
+
+        <input type="submit" value="Enviar"/>
+
         <input type="reset" value="Borrar consulta"/>
     
-
+        </fieldset>
     </form>
 
 
