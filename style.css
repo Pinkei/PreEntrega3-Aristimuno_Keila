@@ -6,6 +6,11 @@
     color: black;
 
 }
+
+.body{
+    background-color: rgba(240, 152, 80, 0.623);
+}
+
 .pileCliente{
     display: flex;
     flex-direction: column;

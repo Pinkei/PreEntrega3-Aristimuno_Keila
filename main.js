@@ -112,15 +112,24 @@ form.addEventListener('submit', function (event) {
     alert('Por favor, ingrese un valor numérico válido para el precio.');
     return;
     }
-
+//localStorage
     let newProd = new Productos(inputMedidas.value, inputPrecio.value);
     aux.push(newProd);
     localStorage.setItem('Consultas', JSON.stringify(aux));
     });
+    //boton sweet 
+    const botonConsultar = document.getElementById("consultar");
+    botonConsultar.addEventListener("click", function(){
+        if (inputMedidas.value.trim() === '' || inputPrecio.value.trim() === '') {
+            return;
+        }
+    swal({
+        title: "¡Muchas gracias!",
+        text: "Su medida y precio fueron registrados, los evaluaremos en breve para darle una respuesta",
+        icon: "success",
+        button: "Gracias",
+        })
+    });
 
-
-  //accedo al DOM
-
-//let formulario = document.getElementById("formDatos");
 
 

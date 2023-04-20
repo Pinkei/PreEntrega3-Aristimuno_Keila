@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Placas atermicas</title>
 </head>
-<body>
+<body class="body">
 <!-- Guardado en Storage las consultas que pasa -->
 <h1>Placas atermicas KT</h1>
 
@@ -26,7 +26,7 @@
     <label for="precio">Precio que se adecua a usted:</label>	
     <input type="number" name="precio" id="precio" />
     </div>
-    <button>Consultar</button>
+    <button id="consultar">Consultar</button>
 </div>
 </form>
 
@@ -38,7 +38,8 @@
         <fieldset class="inputsContainer">
     <div class="input">
     <label for="nombre_apellido">Nombre y Apellido:</label>	
-    <input type="text" name="nombre_apellido" />
+    <input type="text" name="nombre_apellido"  />
+
     </div>
 <div class="input">
     <label for="email">Email:</label>	
@@ -65,7 +66,7 @@
         </fieldset>
     </form>
 
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
